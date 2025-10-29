@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UHHSS PES RAJA 2025</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Top small nav -->
+    <header class="topbar">
+      <nav class="topnav">
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Fixtures</a>
+        <a href="#" class="nav-link">Table</a>
+        <a href="#" class="nav-link">Contact</a>
+        <button id="adminOpenBtn" class="admin-btn">Admin</button>
+      </nav>
+    </header>
+
+    <!-- Hero header -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-item hero-left">
+          <img src="messi1.jpg" alt="Messi" class="hero-face">
+        </div>
+
+        <div class="hero-item hero-center">
+          <img src="UHHSS.png" alt="Logo" class="logo">
+          <h1 class="title">UHHSS PES RAJA <span class="year">2025</span></h1>
+          <p class="subtitle">E-Football Championship • Group Stage → Knockout</p>
+        </div>
+
+        <div class="hero-item hero-right">
+          <img src="ronaldo1.jpg" alt="Ronaldo" class="hero-face">
+        </div>
+      </div>
+
+      <div class="smoke"></div>
+    </section>
+
+    <!-- Main content -->
+    <main class="content">
+      <!-- Groups (cards) -->
+      <section class="groups" id="groupsSection">
+        <div class="groups-grid" id="groupsGrid">
+          <!-- Group cards injected by JS -->
+        </div>
+      </section>
+
+      <!-- Fixtures + Standings area -->
+      <section class="fixtures-area">
+        <div class="fixtures-left">
+          <div class="panel card" id="fixturesPanel">
+            <div class="panel-head">
+              <h3>Fixtures (Edit scores in Admin)</h3>
+              <div class="panel-actions">
+                <button id="exportBtn" class="btn ghost">Export JSON</button>
+              </div>
+            </div>
+            <div id="fixturesContainer" class="fixtures-container">
+              <!-- fixtures injected -->
+            </div>
+          </div>
+        </div>
+
+        <div class="fixtures-right">
+          <div class="panel card" id="standingsPanel">
+            <h3>Standings (Auto)</h3>
+            <div id="standingsContainer">
+              <!-- standings injected -->
+            </div>
+          </div>
+
+          <div class="panel card" id="bracketPanel">
+            <h3>Knockout Bracket</h3>
+            <div id="bracket" class="bracket"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>Designed for UHHSS PES RAJA — Soft animations enabled</div>
+    </footer>
+  </div>
+
+  <!-- ADMIN MODAL -->
+  <div id="adminModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <header class="modal-header">
+        <h2>Admin Login</h2>
+        <button id="closeAdmin" class="modal-close">&times;</button>
+      </header>
+
+      <div class="modal-body">
+        <label>Enter admin password</label>
+        <input id="adminPass" type="password" placeholder="Password">
+        <div class="modal-actions">
+          <button id="adminLoginBtn" class="btn primary">Login</button>
+        </div>
+
+        <hr>
+
+        <div id="adminControls" class="admin-controls hidden">
+          <h3>Edit teams & scores</h3>
+          <p class="muted">Edit any team name directly; scores are editable in the fixtures list.</p>
+          <div class="admin-buttons">
+            <button id="saveBtn" class="btn primary">Save</button>
+            <button id="cancelBtn" class="btn ghost">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
