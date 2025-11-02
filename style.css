@@ -101,6 +101,8 @@ button {
   cursor: pointer;
   color: black;
   font-weight: bold;
+  align-content: center;
+  position: relative; bottom: 90px;
 }
 
 button:hover {
@@ -108,4 +110,9 @@ button:hover {
 }
 .hidden {
   display: none;
+}
+
+.footer {
+  text-align: center;
+  background: linear-gradient(90deg, #655A2D, #E5D6AB);
 }
