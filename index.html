@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Fish Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    
+    
+    <h1><span class="gold">Golden</span> Fish Shop</h1>
+    <form>
+      <i class="fas fa-search"></i>
+    <input type="text" id="search" placeholder="Search fishes..." onkeyup:"search()">
+    <button id="cartBtn">🛒 Cart</button>
+    </form>
+  </header>
+
+  <section id="products" class="grid">
+    
+    <div class="fish-card" id="storeitem">
+      
+  <a href="" class="fish-link">
+    <img src="messi1.jpg" alt="Goldfish">
+    <div class="fish-info">
+      <h3>Goldfish</h3>
+      <p>₹200</p>
+    </div>
+  </a>
+</div>
+    
+    
+    <div class="fish-card" id="storeitem">
+      
+  <a href="" class="fish-link">
+    <img src="messi2.jpg" alt="Goldfish">
+    <div class="fish-info">
+      <h3>Goldfish</h3>
+      <p>₹200</p>
+    </div>
+  </a>
+</div>
+    
+    
+    
+    
+    <div class="fish-card" id="storeitem">
+      
+  <a href="" class="fish-link">
+    <img src="ronaldo1.jpg" alt="Goldfish">
+    <div class="fish-info">
+      <h3>Goldfish</h3>
+      <p>₹200</p>
+    </div>
+  </a>
+</div>
+    
+    
+    <div class="fish-card" id="storeitem">
+      
+  <a href="" class="fish-link">
+    <img src="messi1.jpg" alt="Guppy">
+    <div class="fish-info">
+      <h3>Guppy</h3>
+      <p>₹200</p>
+    </div>
+  </a>
+</div>
+    k
+  </section>
+
+  <div id="cart" class="cart hidden">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="total">Total: $0</p>
+    <button id="checkout">Checkout</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
