@@ -4,16 +4,38 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+.nav {
+  background: #655A2D;
+  align-self: ;
+  display: flex;
+  position: relative; bottom: px; right: 10px;
+  margin-bottom: px;
+  margin: 0px;
+  padding: 0px;
+  font-size: px;
+  width: 376px;
+  border-radius: 20px;
+  
+}
+
+.nav link {
+  align-content: ;
+  border-radius: 20px;
 }
 
 header {
   background: linear-gradient(90deg, #655A2D, #E5D6AB);
-  padding: 2rem 1rem;
-  display: flex;
+  padding: 5px 1rem;
+  display: ;
   align-items: center;
   justify-content: space-between;
 }
+
+
 
 .gold {
   color: black;
@@ -102,7 +124,9 @@ button {
   color: black;
   font-weight: bold;
   align-content: center;
-  position: relative; bottom: 90px;
+  position: relative; bottom: px;
+  margin-bottom: 0px;
+  text-decoration: none;
 }
 
 button:hover {
