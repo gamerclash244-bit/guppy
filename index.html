@@ -1,89 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Golden Fish Shop</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-  <header>
-    <body>
-  <div class="nav">
-    <nav>
-    <a href="sign.html" class="nav-link"><button>sign up</button></a>
-    </nav>
-  </div>
-</body>
-  </header>
-
-
 <body>
+
+  <!-- Navigation -->
   <header>
-    <h1><span class="gold">Golden</span> Fish Shop</h1>
-    <form onsubmit="return false;">
-      <input type="text" id="search" placeholder="Search fishes..." onkeyup="search()" />
-      <button id="cartBtn" type="button"><a href="cart.html">🛒 Cart</a></button>
-    </form>
+    <nav class="navbar">
+      <a href="#">signin</a>
+      <a href="#">login</a>
+      <a href="#">orders</a>
+      <a href="#">cart</a>
+    </nav>
   </header>
-    
 
-
-  <section id="products" class="grid">
-    <!-- Example static cards (optional) -->
-    <div class="fish-card">
-      <a href="#" class="fish-link">
-        <img src="messi1.jpg" alt="Goldfish" />
-        <div class="fish-info">
-          <h3>Goldfish</h3>
-          <p>₹200</p>
-        </div>
-      </a>
+  <!-- Main Content -->
+  <section class="main-section">
+    <div class="text">
+      <h1>We're Introducing</h1>
+      <h2>Our new fish shop</h2>
+      <h3>Where you gets all your favorate<br>fishes</h3>
     </div>
 
-    <div class="fish-card">
-      <a href="#" class="fish-link">
-        <img src="messi2.jpg" alt="Goldfish" />
-        <div class="fish-info">
-          <h3>Goldfish</h3>
-          <p>₹200</p>
-        </div>
-      </a>
-    </div>
+    <!-- Fish Image -->
+    <img src="beta.png" alt="Fish" class="fish">
 
-    <div class="fish-card">
-      <a href="#" class="fish-link">
-        <img src="ronaldo1.jpg" alt="Goldfish" />
-        <div class="fish-info">
-          <h3>Goldfish</h3>
-          <p>₹200</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="fish-card">
-      <a href="#" class="fish-link">
-        <img src="messi1.jpg" alt="Guppy" />
-        <div class="fish-info">
-          <h3>Guppy</h3>
-          <p>₹200</p>
-        </div>
-      </a>
+    <!-- Green Boxes -->
+    <div class="boxes">
+      <a href="#"><div class="box"></div></a>
+      <a href="#"><div class="box"></div></a>
+      <a href="#"><div class="box"></div></a>
+      <a href="#"><div class="box"></div></a>
     </div>
   </section>
 
-  <div id="cart" class="cart hidden">
-    <h2>Your Cart</h2>
-    <ul id="cartItems"></ul>
-    <p id="total">Total: $0</p>
-    <button id="checkout">Checkout</button>
-  </div>
-
-  <script src="script.js"></script>
-  
-  <div class="footer">
-  <footer>©2025 | Desined by DHANI</footer>
-  </div>
 </body>
-
 </html>
