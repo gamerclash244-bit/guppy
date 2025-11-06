@@ -1,142 +1,98 @@
+/* General setup */
 body {
-  background-color: blanchedalmond;
-  color: #E5D6AB;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 0px;
-  margin-bottom: 5px;
-}
-
-.nav {
-  background: #655A2D;
-  align-self: ;
-  display: flex;
-  position: relative; bottom: px; right: px;
-  margin-bottom: px;
   margin: 0px;
-  padding: 0px;
-  font-size: px;
-  width: 355px;
-  border-radius: 20px;
-  
+  font-family: 'Poppins', sans-serif;
+  color: #e6d4ff;
+  background-color: #4B0082; /* purple background */
+  background-image: url('plant.png'); /* your background plant image */
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
-.nav link {
-  align-content: ;
-  border-radius: 20px;
+/* Navigation bar */
+.navbar {
+  background-color: #9BA4F8;
+  text-align: right;
+  padding: 12px 30px;
 }
 
-header {
-  background: linear-gradient(90deg, #655A2D, #E5D6AB);
-  padding: 5px 1rem;
-  display: ;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-
-.gold {
-  color: black;
-}
-
-#search {
-  padding: 8px;
-  border: 2px #E5D6AB;
-  border-radius: 20px;
-  background: #E5D6AB;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
-}
-
-.fish-card {
-  width: 300px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.fish-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-/* Make the whole card a clickable link */
-.fish-link {
-  display: flex;
-  align-items: center;
+.navbar a {
   text-decoration: none;
-  color: black;
-  gap: 15px;
-  background: white;
-  padding: 10px;
+  color: #fff;
+  background-color: #7D65D9;
+  margin-left: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* Style the image */
-.fish-link img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
+.navbar a:hover {
+  background-color: #6352b8;
 }
 
-/* Style the text */
-.fish-info h3 {
+/* Main Section */
+.main-section {
+  text-align: left;
+  position: relative;
+  padding: 60px 20px 120px;
+}
+
+/* Text area */
+.text h1 {
+  font-size: 2.8em;
+  font-weight: 800;
+  color: #EBD3FF;
   margin: 0;
-  font-size: 1.2rem;
-  color: gold;
 }
 
-.fish-info p {
-  margin: 5px 0 0;
-  color: #333;
+.text h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
-
-
-.product {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s;
+.text h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin: 5px 0;
 }
 
+/* Fish image */
+.fish {
+  width: 350px;
+  position: absolute;
+  top: 80px;
+  right: 50px;
+  z-index: 1;
+}
 
-.product:hover {
+/* Boxes Section */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-gap: 40px;
+  justify-content: center;
+  margin-top: 200px;
+  z-index: 2;
+  position: relative;
+}
+
+.box {
+  width: 170px;
+  height: 170px;
+  background-color: #A2DA85;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.box:hover {
+  background-color: #89c26f;
   transform: scale(1.05);
 }
 
-button {
-  background: #655A2D;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
-  align-content: center;
-  position: relative; bottom: px;
-  margin-bottom: 0px;
+a {
   text-decoration: none;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-.hidden {
-  display: none;
-}
-
-.footer {
-  text-align: center;
-  background: linear-gradient(90deg, #655A2D, #E5D6AB);
 }
