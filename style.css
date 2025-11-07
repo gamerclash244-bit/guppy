@@ -4,10 +4,10 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #e6d4ff;
   background-color: #4B0082; /* purple background */
-  background-image: url('plant.png'); /* your background plant image */
+  background-image: url('plantb.png'); /* your background plant image */
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
+  background-position: ;
+  background-size: ;
   overflow-x: hidden;
 }
 
@@ -27,6 +27,7 @@ body {
   border-radius: 6px;
   font-weight: bold;
   transition: 0.3s;
+  display: ;
 }
 
 .navbar a:hover {
@@ -66,33 +67,193 @@ body {
   position: absolute;
   top: 80px;
   right: 50px;
-  z-index: 1;
+  z-index: 0;
 }
 
-/* Boxes Section */
+
+/* ===== Image Boxes (No Green Background) ===== */
 .boxes {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
-  grid-gap: 40px;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 30px;
   justify-content: center;
-  margin-top: 200px;
-  z-index: 2;
-  position: relative;
+  align-items: center;
+  margin: 120px auto 80px;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
 }
 
 .box {
-  width: 170px;
-  height: 170px;
-  background-color: #A2DA85;
   border-radius: 20px;
-  transition: 0.3s;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .box:hover {
-  background-color: #89c26f;
   transform: scale(1.05);
+}
+
+.box img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.box p {
+  margin: 8px 0 0;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 a {
   text-decoration: none;
 }
+
+
+/* Slider (one-by-one slide animation) */
+.slider {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+}
+
+.slimg {
+  flex: 0 0 100%;
+}
+
+.slimg img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #9BA4F8;
+  color: white;
+  opacity: 0.6;
+  padding: 12px 0;
+  margin-top: 60px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.allbody {
+  margin-top: 380px; /* or adjust to what looks right */
+  position: relative;
+}
+
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navbar {
+    text-align: right;
+    padding: 10px;
+  }
+
+  .navbar a {
+    display: inline-block;
+    margin: 6px;
+    padding: 8px 12px;
+  }
+
+  .main-section {
+    text-align: center;
+    padding: 40px 10px;
+  }
+
+  .text h1 {
+    font-size: 1.8em;
+  }
+  .text h2 {
+    font-size: 1.3em;
+  }
+  .text h3 {
+    font-size: 1.1em;
+  }
+
+  .fish {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    right: 0;
+    top: 0;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .slider {
+    width: 95%;
+    max-width: 420px;
+    margin: 20px auto;
+    
+  }
+
+  .slimg img {
+    height: auto;
+    
+  }
+}
+  
+@media (max-width: 768px) {
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: 16px;
+    margin-top: 60px;
+  }
+
+  .box img {
+    height: 130px;
+  }
+
+  .box p {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .boxes {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    gap: 40px;
+  }
+
+  .box img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .allbody {
+    margin-top: 180px; /* moves content closer on small screens */
+  }
+
+  .footer {
+    margin-top: 40px;
+  }
+}
+
