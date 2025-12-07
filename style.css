@@ -1,259 +1,154 @@
-/* General setup */
-body {
-  margin: 0px;
-  font-family: 'Poppins', sans-serif;
-  color: #e6d4ff;
-  background-color: #4B0082; /* purple background */
-  background-image: url('plantb.png'); /* your background plant image */
-  background-repeat: no-repeat;
-  background-position: ;
-  background-size: ;
-  overflow-x: hidden;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-/* Navigation bar */
-.navbar {
-  background-color: #9BA4F8;
-  text-align: right;
-  padding: 12px 30px;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f2f2f2;
+    color:black;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #fff;
-  background-color: #7D65D9;
-  margin-left: 12px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s;
-  display: ;
+/* HEADER */
+.header{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 40px;
+    background:#ffffff;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar a:hover {
-  background-color: #6352b8;
+.logo{
+    color:#ff6f00;
+    font-size:28px;
+    font-weight:700;
 }
 
-/* Main Section */
-.main-section {
-  text-align: left;
-  position: relative;
-  padding: 60px 20px 120px;
+.menu{
+    display:flex;
+    flex-wrap:wrap;
 }
 
-/* Text area */
-.text h1 {
-  font-size: 2.8em;
-  font-weight: 800;
-  color: #EBD3FF;
-  margin: 0;
+.menu a{
+    margin:8px 10px;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
 }
 
-.text h2 {
-  font-size: 1.5em;
-  font-weight: 600;
-  margin: 10px 0;
+.login{
+    padding:6px 14px;
+    border:1px solid #0a74ff;
+    border-radius:6px;
+    color:#0a74ff;
+    text-decoration:none;
+    font-size:14px;
 }
 
-.text h3 {
-  font-size: 1.3em;
-  font-weight: 500;
-  margin: 5px 0;
+/* BANNER */
+.banner{
+    background:linear-gradient(135deg,#ff6f00,#ff9a3c);
+    padding:50px 15px 100px;
+    text-align:center;
+    color:white;
 }
 
-/* Fish image */
-.fish {
-  width: 350px;
-  position: absolute;
-  top: 80px;
-  right: 50px;
-  z-index: 0;
+.banner h2{
+    margin-bottom:30px;
 }
 
-
-/* ===== Image Boxes (No Green Background) ===== */
-.boxes {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(160px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  margin: 120px auto 80px;
-  width: 80%;
-  max-width: 900px;
-  text-align: center;
+/* SEARCH CARD */
+.search-box{
+    max-width:1000px;
+    background:white;
+    color:black;
+    padding:25px;
+    margin:0 auto;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.box {
-  border-radius: 20px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+/* Trip type */
+.trip-type{
+    margin-bottom:20px;
+    text-align:left;
 }
 
-.box:hover {
-  transform: scale(1.05);
+.trip-type label{
+    margin-right:20px;
+    font-size:14px;
 }
 
-.box img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 20px;
-  display: block;
+/* Inputs */
+.inputs{
+    display:grid;
+    grid-template-columns:1fr auto 1fr 1fr 1fr;
+    gap:10px;
+    margin-bottom:20px;
 }
 
-.box p {
-  margin: 8px 0 0;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.inputs input,
+.inputs select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px;
 }
 
-a {
-  text-decoration: none;
+.swap{
+    border:none;
+    background:#0a74ff;
+    color:white;
+    padding:12px;
+    border-radius:50%;
+    cursor:pointer;
 }
 
-
-/* Slider (one-by-one slide animation) */
-.slider {
-  width: 90%;
-  max-width: 700px;
-  margin: 40px auto;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  position: relative;
+/* Fare tags */
+.fare{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-  width: 100%;
+.fare span{
+    background:#eef5ff;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
 }
 
-.slimg {
-  flex: 0 0 100%;
+/* Button */
+.search-btn{
+    display:block;
+    margin:0 auto;
+    padding:12px 40px;
+    border:none;
+    border-radius:30px;
+    background:#ff6f00;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
 }
 
-.slimg img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 20px;
+/* Responsive */
+@media (max-width:768px){
+    .inputs{
+        grid-template-columns:1fr;
+    }
+
+    .swap{
+        width:100%;
+        border-radius:8px;
+    }
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
 }
-
-.footer {
-  text-align: center;
-  background-color: #9BA4F8;
-  color: white;
-  opacity: 0.6;
-  padding: 12px 0;
-  margin-top: 60px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-
-.allbody {
-  margin-top: 380px; /* or adjust to what looks right */
-  position: relative;
-}
-
-
-/* --- Mobile Responsive --- */
-@media (max-width: 768px) {
-
-  body {
-    background-size: cover;
-    background-position: center;
-  }
-
-  .navbar {
-    text-align: right;
-    padding: 10px;
-  }
-
-  .navbar a {
-    display: inline-block;
-    margin: 6px;
-    padding: 8px 12px;
-  }
-
-  .main-section {
-    text-align: center;
-    padding: 40px 10px;
-  }
-
-  .text h1 {
-    font-size: 1.8em;
-  }
-  .text h2 {
-    font-size: 1.3em;
-  }
-  .text h3 {
-    font-size: 1.1em;
-  }
-
-  .fish {
-    position: relative;
-    width: 80%;
-    max-width: 300px;
-    right: 0;
-    top: 0;
-    margin: 20px auto;
-    display: block;
-  }
-
-  .slider {
-    width: 95%;
-    max-width: 420px;
-    margin: 20px auto;
-    
-  }
-
-  .slimg img {
-    height: auto;
-    
-  }
-}
-  
-@media (max-width: 768px) {
-  .boxes {
-    grid-template-columns: repeat(2, 1fr);
-    width: 90%;
-    gap: 16px;
-    margin-top: 60px;
-  }
-
-  .box img {
-    height: 130px;
-  }
-
-  .box p {
-    font-size: 0.9em;
-  }
-}
-
-@media (min-width: 1024px) {
-  .boxes {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1000px;
-    gap: 40px;
-  }
-
-  .box img {
-    height: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  .allbody {
-    margin-top: 180px; /* moves content closer on small screens */
-  }
-
-  .footer {
-    margin-top: 40px;
-  }
-}
-

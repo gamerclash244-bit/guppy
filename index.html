@@ -1,68 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fish Shop</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Booking UI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <a href="sign.html">sign in</a>
-      <a href="login.html">login</a>
-      <a href="orders.html">orders</a>
-      <a href="cart.html">cart</a>
+<header class="header">
+    <div class="logo">goibibo</div>
+
+    <nav class="menu">
+        <a href="#">Flights</a>
+        <a href="#">Hotels</a>
+        <a href="#">Trains</a>
+        <a href="#">Cabs</a>
+        <a href="#">Bus</a>
     </nav>
-  </header>
 
-  <!-- Main Content -->
-  <section class="main-section">
-    <div class="text">
-      <h1>We're Introducing</h1>
-      <h2>Our new fish shop</h2>
-      <h3>Where you gets all your favorate<br>fishes</h3>
-    </div>
+    <a href="#" class="login">Login / Signup</a>
+</header>
 
-    <!-- Fish Image -->
-    <img src="beta.png" alt="Fish" class="fish">
-    
-    <div class="allbody">
-<div class="slider">
-  <div class="slides">
-    <div class="slimg">
-      <a href="fish.html"><img src="Fish.png" alt="Photo 1"></a>
-    </div>
-    <div class="slimg">
-      <a href="accessories.html"><img src="Accessories.png" alt="Photo 2"></a>
-    </div>
-    <div class="slimg">
-      <a href="food.html"><img src="Foods.png" alt="Photo 3"></a>
-    </div>
-    <div class="slimg">
-      <a href="others.html"><img src="Others.png" alt="Photo 4"></a>
-    </div>
-  </div>
-</div>
+<section class="banner">
 
-    <!-- Green Boxes -->
-    <div class="boxes">
-      <a href="fish.html"><div class="box"><img src="Fish.png"><p>Fishes</p></div></a>
-      <a href="#"><div class="box"><img src="Accessories.png"><p>Accessories</p></div></a>
-      <a href="#"><div class="box"><img src="Foods.png"><p>Foods</p></div></a>
-      <a href="#"><div class="box"><img src="Others.png"><p>Others</p></div></a>
-    </div>
-  </section>
-  
-  
-  <!-- footer -->
-  <div class="footer">
-  <footer>©DHANI | 2025</footer>
-</div>
-  <script src="script.js"></script>
+    <h2>Domestic and International Flights</h2>
 
-  </div>
+    <div class="search-box">
+
+        <div class="trip-type">
+            <label><input type="radio" name="trip" checked> One Way</label>
+            <label><input type="radio" name="trip"> Round Trip</label>
+            <label><input type="radio" name="trip"> Multi City</label>
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="from" placeholder="From city or airport">
+            <button class="swap" onclick="swapCities()">⇄</button>
+            <input type="text" id="to" placeholder="To city or airport">
+            <input type="date" id="depart">
+            <select>
+                <option>1 Adult - Economy</option>
+                <option>2 Adults - Economy</option>
+                <option>Business Class</option>
+            </select>
+        </div>
+
+        <div class="fare">
+            <span>🎓 Student</span>
+            <span>👴 Senior</span>
+            <span>🪖 Armed Forces</span>
+            <span>👩‍⚕️ Doctors</span>
+        </div>
+
+        <button class="search-btn" onclick="checkFields()">SEARCH FLIGHTS</button>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

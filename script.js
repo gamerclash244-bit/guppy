@@ -1,12 +1,21 @@
-// Sliding carousel (one-by-one)
-let index = 0;
-const slidesContainer = document.querySelector(".slides");
-const slideCount = document.querySelectorAll(".slimg").length;
+function swapCities(){
+    let from = document.getElementById("from");
+    let to = document.getElementById("to");
 
-function slideNext() {
-  index++;
-  if (index >= slideCount) index = 0;
-  slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+    let temp = from.value;
+    from.value = to.value;
+    to.value = temp;
 }
 
-setInterval(slideNext, 3000); // Change every 3 seconds
+// Basic validation
+function checkFields(){
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+
+    if(from === "" || to === ""){
+        alert("Please enter both FROM and TO locations.");
+    } else {
+        alert("Searching flights from " + from + " to " + to);
+    }
+}
+
